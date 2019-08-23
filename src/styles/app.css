@@ -1,0 +1,127 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.timer-wrapper {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    'clock'
+    'toggle'
+    'start-stop'
+    'reset'
+    'whitespace';
+  width: 240px;
+  height: 300px;
+  border-radius: 20px;
+  margin-top: 100px;
+  background-color: #1A1E24;
+}
+
+.timer-wrapper *:focus {
+  outline: none;
+}
+
+
+
+
+/****************
+***** clock *****
+****************/
+
+.clock {
+  grid-area: clock;
+  display: flex;
+  justify-content: center;
+  line-height: 110px;
+  font-size: 56px;
+  color: white;
+  margin: 5px;
+}
+
+.clock input {
+  box-shadow: none;
+  border: none;
+  border-width: 0px;
+  -webkit-appearance: none;
+  margin: 0px 1px 0px 1px;
+}
+
+.digits {
+  background-color: #1A1E24;
+  color: white;
+  font-size: 40px;
+  width: 50px;
+  transform: translate(0px, 3px);
+}
+
+/* turn off input number spinner button */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+
+
+/****************
+**** buttons ****
+****************/
+
+.toggle{
+  grid-area: toggle;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.circle-button{
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #7AA379;
+  color: #1A1E24;
+  font-size: 12px;
+}
+
+.circle-button:hover {
+  background-color: #93C690;
+}
+
+.rect-button {
+  width: 160px;
+  height: 38px;
+  align-self: center;
+  justify-self: center;
+  border: none;
+  border-radius: 10px;
+  color: #1A1E24;
+  background-color: #CB5355;
+}
+
+.rect-button:hover {
+  background-color: #EA5D5B;
+}
+
+.start {
+  background-color: #7AA379;
+}
+
+.start:hover {
+  background-color: #93C690;
+}
+
+.disable {
+  background-color: grey;
+}
+
+.disable:hover {
+  background-color: grey;
+}
+
